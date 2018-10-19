@@ -1,9 +1,11 @@
 # BigDataProject
 
+# PLAN
+
 # Server
   #Connect Server
-  Use TeamViewer to connect to server
-  Server will be turn off after 11:00 pm
+   Use TeamViewer to connect to server
+   Server will be turn off after 11:00 pm
   Beacause my InternetyIP does not public IP, I need to use TeamViewer.
   The TeamViewer ID and Password change each day.
   Call me(Kaiwen Zhu) for the ID and Password to connect to the server, if you need to deploy your code and test it.
