@@ -1,3 +1,21 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Oct 31 11:49:15 2018
+
+@author: KaiwenZhu
+
+@API
+
+Ad{
+link_Title: The detail of link
+From: Where link user from
+Link: The Link that user visited
+Method: The way user visited the link
+Time: The time
+}
+"""
+
+
 from bs4 import BeautifulSoup
 import re
 import json
@@ -24,6 +42,5 @@ for s in range(len(Soups)):
         data['From']=''
     Datas.append(data)
 print Datas
-##check if the each data set is same: by the time
 					
 			
