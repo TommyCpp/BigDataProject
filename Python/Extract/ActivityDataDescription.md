@@ -30,6 +30,7 @@ u'Oct 4, 2018, 3:00:00 AM EDT',
 u'Interacted with Unknown Device operating system',
 u'Android',
 u'This activity includes interactions with your device operating system, such as dismissing notifications and changing device settings.']
+```
 
 ## Chrome
 - Software Name
