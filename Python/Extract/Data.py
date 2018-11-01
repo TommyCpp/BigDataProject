@@ -7,6 +7,7 @@ Created on Wed Oct 31 22:05:40 2018
 
 import os
 import ExtractActivity 
+import json
 
 file_name = "MyActivity.html"
 base_path = ".\\Takeout\\My Activity\\"
@@ -16,3 +17,7 @@ dirs=os.listdir(base_path)
 for name in range(len(dirs)):
     Activity_Data[dirs[name]] = E_Activity.Extract_Data(base_path+dirs[name]+"\\"+file_name)
 
+Activity_Data = json.dumps(Activity_Data)
+f = open("ActivityData.txt",'w')
+f.write(Activity_Data)
+f.close
