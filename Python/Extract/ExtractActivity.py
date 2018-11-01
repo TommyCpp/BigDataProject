@@ -20,7 +20,7 @@ class Extract_Activity:
         def Extract_Data(self, path):
             soup = BeautifulSoup(open(path),"html.parser")
             Datas = list()
-            Soups=soup.find_all('div','mdl-grid')
+            Soups=soup.find_all('div','outer-cell mdl-cell mdl-cell--12-col mdl-shadow--2dp')
             for s in range(len(Soups)):
                 data = list()
     
