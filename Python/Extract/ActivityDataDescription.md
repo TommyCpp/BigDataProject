@@ -62,6 +62,7 @@ u'https://express.google.com/product/13609267636703892543_0_110028733',
 u'Sep 14, 2018,11:21:23 PM EDT',
 u'Viewed\xa0Apple MMEF2AM/A AirPods Wireless Bluetooth Headset for iPhones with iOS10 or Later (White)',
 None]
+```
 
 ## Google Analysis
 - Software Name
@@ -77,6 +78,7 @@ u'https://www.google.com/url?q=http://lifehacker.com/how-to-install-linux-on-a-c
 u'Sep 20, 2018, 2:13:31 PM EDT',
 u'Visited\xa0lifehacker.com/how-to-install-linux-on-a-chromebook-and-unlock-its-ful-50903934',
 None]
+```
 
 ## Google Analysis
 - Software Name
@@ -108,6 +110,7 @@ u'https://play.google.com/store/apps/details?id=com.fusionmedia.investing',
 u'Oct 2, 2018, 7:15:19 AM EDT',
 u'Uninstalled\xa0Stocks, Forex, Finance, Markets: Portfolio & News',
 None]
+```
 
 ## Help
 - Software Name
