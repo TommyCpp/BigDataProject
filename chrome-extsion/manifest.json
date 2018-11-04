@@ -1,0 +1,22 @@
+{
+  "name": "User Behavior Recorder",
+  "version": "1.0",
+  "description": "Record user behavior so that we can recommend based on that",
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://stackoverflow.com/*"],
+      "js": ["getSelection.js"]
+    }
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": false
+  },
+  "manifest_version": 2
+}
