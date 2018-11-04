@@ -1,0 +1,136 @@
+swagger: "2.0"
+info:
+  description: ""
+  version: "1.0.0"
+  title: "JITR"
+host: "TBD"
+basePath: "/"
+schemes:
+- "https"
+- "http"
+paths:
+  /select:
+    post:
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: ""
+        required: true
+        schema:
+          type: "object"
+          required:
+          - "id"
+          - "type"
+          - "value"
+          properties:
+            id:
+              type: "integer"
+              format: "int64"
+            type:
+              type: "string"
+              enum:
+              - "SELECTION"
+            value:
+              type: "object"
+              required:
+              - "text"
+              - "timestamp"
+              properties:
+                text:
+                  type: "string"
+                timestamp:
+                  type: "integer"
+                  format: "int64"
+                  description: "timestamp of the selection"
+      responses:
+        200:
+          description: "OK"
+  /url:
+    post:
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: ""
+        required: true
+        schema:
+          type: "object"
+          required:
+          - "id"
+          - "type"
+          - "value"
+          properties:
+            id:
+              type: "integer"
+              format: "int64"
+            type:
+              type: "string"
+              enum:
+              - "URL"
+            value:
+              type: "object"
+              required:
+              - "url"
+              - "timestamp"
+              properties:
+                url:
+                  type: "string"
+                timestamp:
+                  type: "integer"
+                  format: "int64"
+                  description: "timestamp of the selection"
+      responses:
+        200:
+          description: "OK"
+  /recommend:
+    post:
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: ""
+        required: true
+        schema:
+          type: "object"
+          required:
+          - "id"
+          - "type"
+          - "selection"
+          properties:
+            id:
+              type: "integer"
+              format: "int64"
+              description: "user id"
+            type:
+              type: "string"
+              enum:
+              - "RECOMMENDATION"
+            selection:
+              type: "string"
+              description: "the selection text by user"
+      responses:
+        200:
+          description: "OK"
+          schema:
+            type: array
+            items:
+              type: object
+              required:
+              - "title"
+              - "url"
+              properties:
+                title:
+                  type: "string"
+                url:
+                  type: "string"
+
