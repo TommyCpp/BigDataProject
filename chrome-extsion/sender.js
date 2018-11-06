@@ -14,6 +14,9 @@ function sendSelection(selection) {
      * */
     sendData({
         type: "SELECTION",
-        value: selection,
+        value: {
+            "text": selection,
+            "timestamp": new Date().getTime(),
+        }
     });
 }
