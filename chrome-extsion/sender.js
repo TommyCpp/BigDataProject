@@ -4,6 +4,7 @@ function sendData(data) {
      * output: null
      * Send data to back-end
      * */
+    console.log("Sended!")//todo:send
 }
 
 function sendSelection(selection) {
