@@ -4,6 +4,7 @@ function sendData(data) {
      * output: null
      * Send data to back-end
      * */
+    console.log("Sended!")//todo:send
 }
 
 function sendSelection(selection) {
@@ -14,6 +15,9 @@ function sendSelection(selection) {
      * */
     sendData({
         type: "SELECTION",
-        value: selection,
+        value: {
+            "text": selection,
+            "timestamp": new Date().getTime(),
+        }
     });
 }
