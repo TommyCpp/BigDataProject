@@ -2,19 +2,24 @@
 
 # PLAN
 
-# Server
-  <strong>#Connect Server</strong></br>
-  Use TeamViewer to connect to server.</br>
-  Server will be turn off after 11:00 pm.</br>
-  Beacause my InternetyIP does not public IP, I need to use TeamViewer.</br>
-  The TeamViewer ID and Password change each day.</br>
-  Call me(Kaiwen Zhu) for the ID and Password to connect to the server, if you need to deploy your code and test it.</br>
-  TeamViewer ServerID:</br>
-  TeamViewer ServerPassWord:</br>
+# Server: http://52.87.181.158:8081/
+  Server IP：52.87.181.158
+  Public Port: 8081
 
   Ubuntu 18.04</br>
-  Operation System User: kevin</br>
-  Operation System Password : 19950314</br>
+  System Id:root</br>
+  System Password : 19950314</br>
+  
+  Public Key: BigDataProject\Server\Kevin\.ssh\MyKey.pem
+  
+  Connect Way:
+  Download Git Bash
+  Right Click -> Click "Git Bash Here" -> Type in following command:
+  ```
+   ssh -i 'C:\Studio\BigDataProject\Server\Kevin\.ssh\MyKey.pem' ubuntu@52.87.181.158
+  ```
+  "C:\Studio\BigDataProject\Server\Kevin\.ssh\MyKey.pem" is the place where the MyKey.pem stays in your computer
+  
 
   <strong>#Config Server</strong></br>
   #Install Oracle Java8</br>
