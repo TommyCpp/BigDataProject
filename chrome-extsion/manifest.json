@@ -4,7 +4,12 @@
   "description": "Record user behavior so that we can recommend based on that",
   "permissions": [
     "storage",
-    "activeTab"
+    "activeTab",
+    "tabs",
+    "https://www.gwu.edu/"
+  ],
+  "web_accessible_resources": [
+    "frame.html"
   ],
   "content_scripts": [
     {
@@ -14,14 +19,14 @@
       "js": [
         "sender.js",
         "getSelection.js"
-      ]
+      ],
+      "all_frames": true
     }
   ],
   "background": {
     "scripts": [
       "background.js"
-    ],
-    "persistent": false
+    ]
   },
   "manifest_version": 2
 }

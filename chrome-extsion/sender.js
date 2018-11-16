@@ -21,3 +21,14 @@ function sendSelection(selection) {
         }
     });
 }
+
+function sendLocation(location) {
+    sendData({
+        type: "LOCATION",
+        values: {
+            "text": location,
+            "timestamp": new Date().getTime()
+        }
+    })
+
+}

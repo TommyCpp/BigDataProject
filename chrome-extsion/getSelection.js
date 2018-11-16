@@ -1,8 +1,12 @@
+sendData(location.href);
 window.onmouseup = function (e) {
     if (document.getElementById("user-behavior-icon") != null) {
         document.getElementById("user-behavior-icon").remove();//remove remaining icon
     }
-    if (window.getSelection() != null && window.getSelection().toString() !== "") {
+    if (document.getElementById("recommend-iframe") !== null) {
+        document.getElementById("recommend-iframe").remove();
+    }
+    if (window.getSelection() != null && window.getSelection().toString() !== "" && window.getSelection().toString().trim() !== "") {
         //if we get selection
 
         var selection = window.getSelection();
@@ -21,6 +25,20 @@ window.onmouseup = function (e) {
         y = e.clientY + document.body.scrollTop - document.body.clientTop;
         icon.setAttribute("style", `top: ${y - 10}px !important; left: ${x + 10}px !important; position:fixed;`);
         icon.setAttribute("id", "user-behavior-icon");
+        icon.onmouseover = function () {
+            var extensionOrigin = 'chrome-extension://' + chrome.runtime.id;
+            if (!location.ancestorOrigins.contains(extensionOrigin) && document.getElementById("recommend-iframe") == null) {
+                var iframe = document.createElement('iframe');
+                iframe.setAttribute("id", "recommend-iframe");
+                // Must be declared at web_accessible_resources in manifest.json
+                iframe.src = chrome.runtime.getURL('frame.html');
+
+                // Some styles for a fancy sidebar
+                iframe.style.cssText = 'position:fixed;display:block;' +
+                    'width:300px;height:300px;z-index:1000;' + `top:${y - 20}px;left:${x + 40}px;`;
+                document.body.appendChild(iframe);
+            }
+        };
         document.getElementsByTagName("body")[0].appendChild(icon);
 
         //send data
