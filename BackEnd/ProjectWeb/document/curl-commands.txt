@@ -1,0 +1,5 @@
+# Read Hello;
+curl -i -H GET localhost:8080/hello
+
+#Add new user
+curl -i -H "Content-Type: application/json" -X POST -d "{ \"name\":\"HONE\", \"statement\":\"I\"}" localhost:8080/data
