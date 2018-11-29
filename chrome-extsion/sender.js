@@ -13,13 +13,24 @@ function sendSelection(selection) {
      * output: null
      * Send selection string
      * */
-    sendData({
-        type: "SELECTION",
-        value: {
-            "text": selection,
-            "timestamp": new Date().getTime(),
+    chrome.storage.sync.get(['JITR-username', 'JITR-id'], function (result) {
+        var id = result["JITR-id"];
+        var username = result["JITR-username"];
+        if(id !== null && username !== null){
+            sendData({
+                error: "",
+                id: id,
+                type: "SELECTION",
+                value: {
+                    "text": selection,
+                    "timestamp": new Date().getTime(),
+                    "type": "SELECTION",
+                    "username": username,
+                }
+            });
         }
     });
+
 }
 
 function sendLocation(location) {
@@ -30,5 +41,4 @@ function sendLocation(location) {
             "timestamp": new Date().getTime()
         }
     })
-
 }
