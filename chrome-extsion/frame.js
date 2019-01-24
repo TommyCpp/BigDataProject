@@ -1,0 +1,3 @@
+function jump(){
+    location.url =
+}

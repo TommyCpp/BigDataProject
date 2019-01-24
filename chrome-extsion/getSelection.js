@@ -35,7 +35,7 @@ window.onmouseup = function (e) {
 
                 // Some styles for a fancy sidebar
                 iframe.style.cssText = 'position:fixed;display:block;' +
-                    'width:300px;height:300px;z-index:1000;' + `top:${y - 20}px;left:${x + 40}px;`;
+                    'width:600px;height:600px;z-index:1000;' + `top:${y - 20}px;left:${x + 40}px;`;
                 document.body.appendChild(iframe);
             }
         };
