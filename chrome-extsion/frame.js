@@ -17,5 +17,5 @@ function main() {
         if (pArr[0] === "text")
             selectedText = pArr[1];
     }
-    document.getElementById("text").textContent = selectedText;
+    // document.getElementById("text").textContent = "About " + selectedText + " , We find following may interest you";
 }
