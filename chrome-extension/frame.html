@@ -32,6 +32,8 @@
         overflow: hidden;
         margin-left: 20px;
         margin-right: 20px;
+        margin-top: 20px;
+        height: 300px;
 
     }
 
@@ -42,6 +44,15 @@
 
     button.close{
         color: white;
+    }
+
+    .hidden-content{
+        display: none;
+    }
+
+    .content-card{
+        width: 250px;
+        height: 300px;
     }
 </style>
 <nav class="navbar navbar-expand-lg ">
@@ -58,26 +69,76 @@
 <div class="col-sm" id="text">
 </div>
 <div class="row" id="container">
-    <div class="row">
-        <div class="col-sm" style="width: 250px; height: 250px;">
+    <div class="row hidden-content" id="stream">
+        <div class="col-sm content-card">
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title">Calling the base constructor in C#</h5>
-                    <p class="card-text">If I inherit from a base class and want to pass something from the constructor
+                    <h5 class="card-title">How do I read / convert an InputStream into a String in Java?</h5>
+                    <p class="card-text">If you have a java.io.InputStream object, how should you process that object and ...
                         ...</p>
-                    <a href="https://getbootstrap.com/docs/4.0/components/card/" target="_blank"
+                    <a href="https://stackoverflow.com/questions/309424/how-do-i-read-convert-an-inputstream-into-a-string-in-java" target="_blank"
                        class="btn btn-primary">Go
                         there</a>
                 </div>
             </div>
         </div>
-        <div class="col-sm" style="width: 250px; height: 250px;">
+        <div class="col-sm content-card">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">BufferedInputStream To String Conversion?</h5>
+                    <p class="card-text">Hi I want to put this BufferedInputStream into my string how can I do this
+                        ...</p>
+                    <a href="https://stackoverflow.com/questions/5713857/bufferedinputstream-to-string-conversion" target="_blank"
+                       class="btn btn-primary">Go
+                        there</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row hidden-content" id="constructor">
+        <div class="col-sm content-card">
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Calling the base constructor in C#</h5>
                     <p class="card-text">If I inherit from a base class and want to pass something from the constructor
                         ...</p>
-                    <a href="https://getbootstrap.com/docs/4.0/components/card/" target="_blank"
+                    <a href="https://stackoverflow.com/questions/12051/calling-the-base-constructor-in-c-sharp" target="_blank"
+                       class="btn btn-primary">Go
+                        there</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm content-card">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">How do I call one constructor from another in Java?</h5>
+                    <p class="card-text">Is it possible to call a constructor from another (within the same class, not from a subclass)?
+                        ...</p>
+                    <a href="https://stackoverflow.com/questions/285177/how-do-i-call-one-constructor-from-another-in-java" target="_blank"
+                       class="btn btn-primary">Go
+                        there</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row hidden-content" id="use-strict">
+        <div class="col-sm content-card">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">What does "use strict" do in JavaScript, and what is the reasoning behind it?</h5>
+                    <p class="card-text">Recently, I ran some ...</p>
+                    <a href="https://stackoverflow.com/questions/1335851/what-does-use-strict-do-in-javascript-and-what-is-the-reasoning-behind-it" target="_blank"
+                       class="btn btn-primary">Go
+                        there</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm content-card">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">How is the 'use strict' statement interpreted in Node.js?</h5>
+                    <p class="card-text">I have started to explore the Node.js and wrote many demo web application...</p>
+                    <a href="https://stackoverflow.com/questions/18417381/how-is-the-use-strict-statement-interpreted-in-node-js" target="_blank"
                        class="btn btn-primary">Go
                         there</a>
                 </div>

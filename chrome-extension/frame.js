@@ -17,5 +17,18 @@ function main() {
         if (pArr[0] === "text")
             selectedText = pArr[1];
     }
+    selectedText = selectedText.toLowerCase();
+    selectedText = selectedText.trim();
+    switch (selectedText) {
+        case "constructor":
+            document.getElementById("constructor").classList.remove("hidden-content");
+            break;
+        case "stream":
+            document.getElementById("stream").classList.remove("hidden-content");
+            break;
+        case "use%20strict":
+            document.getElementById("use-strict").classList.remove("hidden-content");
+            break;
+    }
     // document.getElementById("text").textContent = "About " + selectedText + " , We find following may interest you";
 }
